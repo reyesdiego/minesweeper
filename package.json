@@ -1,0 +1,26 @@
+{
+  "name": "minesweeper",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyesdiego/minesweeper.git"
+  },
+  "keywords": [],
+  "author": "Diego Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyesdiego/minesweeper/issues"
+  },
+  "homepage": "https://github.com/reyesdiego/minesweeper#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
