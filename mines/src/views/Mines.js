@@ -7,7 +7,8 @@ class Mines extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      game: {}
+      game: {},
+      entity: {}
     };
   }
   componentDidMount() {
@@ -18,6 +19,19 @@ class Mines extends React.Component {
         this.setState({ game: response.data });
       });
   }
+
+ 
+  openCell = cellId => {
+    const { game } = this.state;
+    axios
+      .post("http://localhost:3000/games/open", {
+        gameId: game.gameId,
+        cellId
+      })
+      .then(response => {
+        this.setState({ game: response.data });
+      });
+  };
 
   render() {
     const { game } = this.state;
@@ -31,7 +45,12 @@ class Mines extends React.Component {
           const cellId = `${i}.${j}`;
           children.push(
             <td key={j}>
-              <Cell cellId={cellId} cell={board[cellId]}></Cell>
+              <Cell
+                cellId={cellId}
+                gameIsOver={game.isOver}
+                cell={board[cellId]}
+                openCell={this.openCell}
+              ></Cell>
             </td>
           );
         }
@@ -42,6 +61,7 @@ class Mines extends React.Component {
     return (
       <div>
         <div className="App">
+         
           <header className="App-header">
             {game.board ? (
               <table>

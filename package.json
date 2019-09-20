@@ -4,7 +4,7 @@
   "description": "Test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./src/test/restTest.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,10 @@
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
   }
 }

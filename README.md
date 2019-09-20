@@ -11,6 +11,7 @@ The idea is to have the Game with the following model:
 ```
 {
     "gameId": 0.28410485215995873,
+    "isOver": false,
     "board": {
         "rows": 3,
           "cols": 3,
@@ -71,3 +72,12 @@ The idea is to have the Game with the following model:
     }
 }
 ```
+
+The api persists the game instances in memory. Of course you can have more than one instance at a time (try openning several clients). The front-end side just show the game board and handle the click event to call the endpoint of the cell.
+
+
+```
+npm install  //root dir API
+cd mines
+npm install  //client dir RESTJS
+
