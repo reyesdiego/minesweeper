@@ -4,6 +4,6 @@ POST http://localhost:3000/games
 Content-Type: application/json
 
 {
-    "rows":10,
-    "cols":10
+    "rows":3,
+    "cols":3
 }
