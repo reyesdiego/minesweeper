@@ -4,6 +4,7 @@ const compression = require("compression");
 const cors = require("cors");
 const http = require("http");
 const { PORT } = require("../constants");
+const routes = require("../routes");
 
 const expressUp = () => {
   const app = express();
@@ -19,7 +20,7 @@ const expressUp = () => {
   });
 
   const server = http.createServer(app);
-  //TODO put port in constants file
+  routes(app);
 
   server.listen(PORT, () =>
     console.log(
