@@ -81,3 +81,5 @@ npm install  //root dir API
 cd mines
 npm install  //client dir RESTJS
 
+
+Last Note: I did not have the time to reveal all the not mined cells and put inputs for rows and cols at the front end
